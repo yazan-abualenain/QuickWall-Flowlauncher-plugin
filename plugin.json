@@ -2,11 +2,11 @@
   "ID": "f8a2b1c3d4e5f6a7b8c9d0e1f2a3b4c5",
   "ActionKeyword": "qw",
   "Name": "QuickWall",
-  "Description": "Browse local wallpaper folders and apply with Enter. Folder navigation, thumbnail previews.",
+  "Description": "Browse wallpaper folders and set desktop wallpapers with Enter.",
   "Author": "Yazan + Alan",
   "Version": "1.0.0",
   "Language": "python",
-  "Website": "https://github.com/yazan/quickwall",
+  "Website": "https://github.com/yazan-abualenain/QuickWall-Flowlauncher-plugin",
   "IcoPath": "Images\\app.png",
   "ExecuteFileName": "main.py"
 }

@@ -26,7 +26,7 @@ Browse your wallpaper collection by folder, filter by name, and apply any image 
 
 ### Manual
 
-1. Download the latest `QuickWall.zip` from [Releases](https://github.com/yazan/QuickWall/releases)
+1. Download the latest `QuickWall.zip` from [Releases](https://github.com/yazan-abualenain/QuickWall-Flowlauncher-plugin/releases)
 2. Extract to `%APPDATA%\FlowLauncher\Plugins\QuickWall-1.0.0\`
 3. Open Flow Launcher and type `plugin reload`
 4. Type `qw` to start browsing

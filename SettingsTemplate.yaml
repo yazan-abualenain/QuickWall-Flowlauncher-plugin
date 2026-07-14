@@ -1,0 +1,10 @@
+body:
+  - type: textBlock
+    attributes:
+      description: "QuickWall — browse wallpaper folders and set wallpapers with Enter. Type 'qw' in Flow Launcher to start. After changing settings below, type 'plugin reload' or restart Flow Launcher."
+  - type: input
+    attributes:
+      name: wallpaper_root
+      label: "Wallpapers Root Folder"
+      description: 'Full path to your wallpaper folder. Example: C:\Users\yazan\Pictures\Wallpapers. Reload Flow after changing.'
+      defaultValue: ""

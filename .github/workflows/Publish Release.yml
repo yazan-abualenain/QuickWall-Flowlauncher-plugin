@@ -1,0 +1,35 @@
+name: Publish Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - .github/workflows/*
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+          path: 'plugin.json'
+          prop_path: 'Version'
+
+      - name: Package plugin
+        run: |
+          zip -r QuickWall.zip . -x '*.git*' '.github/*' 'README.md'
+          echo "Packaged version ${{ steps.version.outputs.prop }}"
+
+      - name: Publish release
+        if: success()
+        uses: softprops/action-gh-release@v1
+        with:
+          files: QuickWall.zip
+          tag_name: "v${{ steps.version.outputs.prop }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

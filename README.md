@@ -58,5 +58,3 @@ MIT
 ---
 
 *Vibe-coded with [Hermes Agent](https://hermes-agent.nousresearch.com)*
-
-*Published on the [Flow Launcher Plugin Store](https://www.flowlauncher.com/plugins)*

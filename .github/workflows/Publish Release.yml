@@ -11,25 +11,25 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Get version
+      - name: Get version from plugin.json
         id: version
-        uses: notiz-dev/github-action-json-property@release
-        with:
-          path: 'plugin.json'
-          prop_path: 'Version'
+        run: |
+          echo "prop=$(jq -r '.Version' plugin.json)" >> "$GITHUB_OUTPUT"
+          echo "version is $(jq -r '.Version' plugin.json)"
 
       - name: Package plugin
         run: |
           zip -r QuickWall.zip . -x '*.git*' '.github/*' 'README.md'
           echo "Packaged version ${{ steps.version.outputs.prop }}"
 
-      - name: Publish release
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         if: success()
-        uses: softprops/action-gh-release@v1
         with:
           files: QuickWall.zip
           tag_name: "v${{ steps.version.outputs.prop }}"
+          generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

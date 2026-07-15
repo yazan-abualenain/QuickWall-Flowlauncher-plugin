@@ -1,8 +1,4 @@
-__pycache__/
-*.pyc
-*.pyo
-plugin.log
-cache/
-test_quickwall.py
-clean_settings.py
-test_settings.py
+lib/.lock
+lib/*.dist-info/
+*.zip
+QuickWall-*.json

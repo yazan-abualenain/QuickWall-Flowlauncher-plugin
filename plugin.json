@@ -4,7 +4,7 @@
   "Name": "QuickWall",
   "Description": "Browse wallpaper folders and set desktop wallpapers with Enter.",
   "Author": "Yazan + Alan",
-  "Version": "1.0.0",
+  "Version": "1.1.0",
   "Language": "python",
   "Website": "https://github.com/yazan-abualenain/QuickWall-Flowlauncher-plugin",
   "IcoPath": "Images\\app.png",
